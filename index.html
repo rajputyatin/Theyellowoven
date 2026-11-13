@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Yellow Oven | Artisanal Dessert Bar &amp; Café • Ahmedabad</title>
+  <meta name="description" content="The Yellow Oven is Ahmedabad's premier late-night dessert café in Bodakdev. Viral fire desserts, plated Callebaut creations, sourdough pizzas, and specialty coffee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-text: #3B331F;
+      --color-primary: #D79E17;
+      --color-secondary: #B5A58B;
+      --color-bg: #DDD1BA;
+      --color-bg-card: #ECE4D4;
+      --color-bg-card-hover: #F4EFE6;
+      --color-card-border: rgba(181, 165, 139, 0.45);
+      --color-surface-white: #FCFAF6;
+      --color-dark-hero: #252014;
+      --color-dark-hero-surface: #302A1C;
+      --color-pill-bg: rgba(215, 158, 23, 0.15);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow-sm: 0 2px 8px rgba(59, 51, 31, 0.06);
+      --shadow-md: 0 8px 24px rgba(59, 51, 31, 0.10);
+      --shadow-lg: 0 16px 36px rgba(59, 51, 31, 0.14);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background-color: var(--color-primary);
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--color-text);
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-title .highlight {
+      color: var(--color-primary);
+      font-style: italic;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--color-text);
+      opacity: 0.9;
+      max-width: 650px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.85rem 1.8rem;
+      border-radius: var(--radius-full);
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #231E12;
+      border: 2px solid var(--color-primary);
+      box-shadow: 0 4px 14px rgba(215, 158, 23, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: #C08C12;
+      border-color: #C08C12;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(215, 158, 23, 0.45);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-text);
+      border: 2px solid var(--color-secondary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-secondary);
+      color: #231E12;
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-secondary {
+      background-color: rgba(221, 209, 186, 0.15);
+      color: #DDD1BA;
+      border: 2px solid var(--color-secondary);
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-hero-secondary:hover {
+      background-color: var(--color-secondary);
+      color: #231E12;
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.775rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-full);
+      background-color: var(--color-pill-bg);
+      color: var(--color-text);
+      border: 1px solid rgba(215, 158, 23, 0.35);
+    }
+
+    /* =========================================================
+       1. NAVBAR
+       ========================================================= */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(221, 209, 186, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(181, 165, 139, 0.5);
+      transition: var(--transition-smooth);
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(221, 209, 186, 0.98);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #D79E17, #B58410);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #231E12;
+      box-shadow: 0 3px 10px rgba(215, 158, 23, 0.4);
+    }
+
+    .logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+      line-height: 1.1;
+    }
+
+    .logo-subtext {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--color-text);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-primary);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hamburger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 32px;
+      height: 26px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .hamburger-btn span {
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-text);
+      border-radius: 4px;
+      transition: var(--transition-smooth);
+    }
+
+    .hamburger-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-bg);
+      border-bottom: 2px solid var(--color-secondary);
+      padding: 2rem 1.5rem;
+      box-shadow: var(--shadow-lg);
+      flex-direction: column;
+      gap: 1.5rem;
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.15rem;
+      padding: 0.5rem 0;
+      display: block;
+    }
+
+    /* =========================================================
+       2. HERO SECTION
+       ========================================================= */
+    .hero-section {
+      position: relative;
+      background-color: var(--color-dark-hero);
+      color: #DDD1BA;
+      padding: 6rem 0 5rem;
+      overflow: hidden;
+      background-image:
+        radial-gradient(circle at 85% 20%, rgba(215, 158, 23, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(181, 165, 139, 0.12) 0%, transparent 45%),
+        linear-gradient(180deg, #252014 0%, #1A160D 100%);
+    }
+
+    .hero-texture {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: radial-gradient(#DDD1BA 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      background: rgba(215, 158, 23, 0.16);
+      border: 1px solid rgba(215, 158, 23, 0.4);
+      color: var(--color-primary);
+      font-size: 0.825rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-pill .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #2ecc71;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #2ecc71;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      color: #DDD1BA;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-headline span.accent {
+      color: var(--color-primary);
+      font-style: italic;
+      display: inline-block;
+    }
+
+    .hero-subheadline {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #C5BAA5;
+      margin-bottom: 2.25rem;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(181, 165, 139, 0.25);
+    }
+
+    .hero-stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat-val {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .hero-stat-lbl {
+      font-size: 0.775rem;
+      color: #A99E89;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-card-visual {
+      position: relative;
+    }
+
+    .hero-showcase-box {
+      background: linear-gradient(145deg, #302A1C, #211B10);
+      border: 1px solid rgba(215, 158, 23, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .hero-showcase-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    .featured-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: rgba(215, 158, 23, 0.12);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+    }
+
+    .hero-showcase-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: #DDD1BA;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-showcase-desc {
+      font-size: 0.9rem;
+      color: #B5A58B;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .hero-dessert-visual {
+      width: 100%;
+      height: 200px;
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle, #524328 0%, #2A2213 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px dashed rgba(215, 158, 23, 0.4);
+    }
+
+    .hero-flame-icon {
+      font-size: 3.5rem;
+      animation: flicker 1.8s infinite ease-in-out alternate;
+      filter: drop-shadow(0 0 16px rgba(215, 158, 23, 0.8));
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(0.96) rotate(-2deg); opacity: 0.9; }
+      100% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+    }
+
+    .hero-dessert-caption {
+      margin-top: 0.5rem;
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -15px;
+      right: -10px;
+      background: #D79E17;
+      color: #231E12;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* =========================================================
+       3. FEATURED DRINKS & MENU PREVIEW
+       ========================================================= */
+    .menu-preview-section {
+      padding: 6rem 0;
+      background-color: var(--color-bg);
+    }
+
+    .section-header-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .signature-card {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .signature-card:hover {
+      transform: translateY(-6px);
+      background-color: var(--color-bg-card-hover);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .card-tag {
+      font-size: 0.725rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #231E12;
+      background-color: var(--color-primary);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+    }
+
+    .card-price {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 0.6rem;
+    }
+
+    .card-desc {
+      font-size: 0.925rem;
+      color: var(--color-text);
+      opacity: 0.85;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+      line-height: 1.55;
+    }
+
+    .card-flavor-note {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #725D2B;
+      border-top: 1px dashed rgba(181, 165, 139, 0.6);
+      padding-top: 0.85rem;
+    }
+
+    /* Menu Interactive Section */
+    .menu-tabs-wrapper {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .menu-tabs-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .menu-tabs-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .tab-btn {
+      padding: 0.6rem 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      color: var(--color-text);
+      background-color: transparent;
+      border: 1px solid var(--color-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #231E12;
+    }
+
+    .menu-items-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .menu-items-grid.active-tab-panel {
+      display: grid;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-item-row {
+      background: var(--color-surface-white);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(181, 165, 139, 0.35);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+
+    .menu-item-row:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 4px 12px rgba(59, 51, 31, 0.08);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+    }
+
+    .item-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .item-price {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--color-text);
+      font-size: 1.1rem;
+      margin-left: 0.5rem;
+    }
+
+    .item-desc {
+      font-size: 0.85rem;
+      color: var(--color-text);
+      opacity: 0.8;
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       4. ABOUT / BRAND STORY
+       ========================================================= */
+    .story-section {
+      padding: 6rem 0;
+      background-color: #ECE4D3;
+      position: relative;
+      border-top: 1px solid var(--color-card-border);
+      border-bottom: 1px solid var(--color-card-border);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .story-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .story-blurb {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin-bottom: 2rem;
+      position: relative;
+      font-style: normal;
+    }
+
+    .story-quote-mark {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--color-primary);
+      opacity: 0.4;
+      display: block;
+      margin-bottom: -1rem;
+    }
+
+    .founder-signature {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-secondary);
+    }
+
+    .founder-avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), #A67507);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #231E12;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(215, 158, 23, 0.3);
+    }
+
+    .founder-details h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .founder-details p {
+      font-size: 0.85rem;
+      color: #6C5E3D;
+      font-weight: 600;
+    }
+
+    .values-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .value-card {
+      background: var(--color-surface-white);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .value-card:hover {
+      border-color: var(--color-primary);
+      transform: translateX(6px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: var(--color-pill-bg);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .value-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-text);
+    }
+
+    .value-card p {
+      font-size: 0.88rem;
+      color: var(--color-text);
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    /* Customer Voice Carousel/Strip */
+    .guest-reviews-box {
+      margin-top: 3.5rem;
+      padding: 2rem;
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-card-border);
+    }
+
+    .guest-reviews-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      text-align: center;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+
+    .reviews-stream {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .review-pill {
+      background: var(--color-surface-white);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      border: 1px solid rgba(181, 165, 139, 0.4);
+      font-size: 0.875rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-pill-text {
+      font-style: italic;
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .review-author {
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* =========================================================
+       5. VISIT & HOURS BLOCK
+       ========================================================= */
+    .visit-section {
+      padding: 6rem 0;
+      background-color: var(--color-bg);
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+
+    .visit-info-card {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .status-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--color-surface-white);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #27ae60;
+      box-shadow: 0 0 6px #27ae60;
+    }
+
+    .status-dot.closed {
+      background-color: #e74c3c;
+      box-shadow: 0 0 6px #e74c3c;
+    }
+
+    .info-block {
+      margin-bottom: 2rem;
+    }
+
+    .info-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+    }
+
+    .info-heading svg {
+      color: var(--color-primary);
+    }
+
+    .address-text {
+      font-size: 1rem;
+      color: var(--color-text);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* Hours Table */
+    .hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.925rem;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0;
+      border-bottom: 1px dashed rgba(181, 165, 139, 0.45);
+    }
+
+    .hours-row.highlight-day {
+      font-weight: 700;
+      color: #231E12;
+      background-color: rgba(215, 158, 23, 0.12);
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-sm);
+      border-bottom: none;
+    }
+
+    .hours-day {
+      color: var(--color-text);
+    }
+
+    .hours-time {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .transit-note {
+      background-color: var(--color-surface-white);
+      border-left: 3px solid var(--color-primary);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.875rem;
+      color: var(--color-text);
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .visit-map-card {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      min-height: 480px;
+    }
+
+    .map-frame-wrapper {
+      flex-grow: 1;
+      width: 100%;
+      position: relative;
+      background-color: #CFC5B2;
+    }
+
+    .map-frame-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .map-actions {
+      padding: 1.25rem 1.5rem;
+      background: var(--color-surface-white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid var(--color-card-border);
+    }
+
+    .location-landmark {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* =========================================================
+       6. FOOTER
+       ========================================================= */
+    .footer {
+      background-color: #241E12;
+      color: #DDD1BA;
+      padding: 5rem 0 2rem;
+      border-top: 1px solid rgba(215, 158, 23, 0.3);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand .logo-text {
+      color: #DDD1BA;
+    }
+
+    .footer-brand p {
+      margin-top: 1rem;
+      font-size: 0.925rem;
+      color: #B5A58B;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-link {
+      color: #C4B9A5;
+      font-size: 0.9rem;
+      transition: var(--transition-smooth);
+    }
+
+    .footer-link:hover {
+      color: var(--color-primary);
+      padding-left: 4px;
+    }
+
+    /* Newsletter */
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .newsletter-input-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .newsletter-input {
+      flex-grow: 1;
+      padding: 0.75rem 1rem;
+      background-color: #332B1B;
+      border: 1px solid #4B3F29;
+      border-radius: var(--radius-full);
+      color: #DDD1BA;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 8px rgba(215, 158, 23, 0.3);
+    }
+
+    .newsletter-input::placeholder {
+      color: #8C7F6C;
+    }
+
+    .newsletter-feedback {
+      font-size: 0.825rem;
+      display: none;
+    }
+
+    .newsletter-feedback.success {
+      color: #2ecc71;
+      display: block;
+    }
+
+    .newsletter-feedback.error {
+      color: #e74c3c;
+      display: block;
+    }
+
+    /* Social Icons */
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #332B1B;
+      border: 1px solid #4A3E29;
+      color: #DDD1BA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .social-icon-btn:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #231E12;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid #382F1E;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.825rem;
+      color: #8E8270;
+    }
+
+    .footer-bottom a {
+      color: var(--color-secondary);
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================= */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .hero-card-visual {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-cta .btn {
+        display: none;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .newsletter-input-group {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+      .hero-actions .btn {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
+      .hero-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       1. NAVBAR
+       ========================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo" aria-label="The Yellow Oven Home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text">THE YELLOW OVEN</div>
+          <div class="logo-subtext">Baked with Love • Ahmedabad</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#location" class="nav-link">Location</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#location" class="btn btn-primary" style="padding: 0.6rem 1.4rem;">Visit Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#menu" class="nav-link mobile-nav-link">Menu</a>
+      <a href="#story" class="nav-link mobile-nav-link">Our Story</a>
+      <a href="#location" class="nav-link mobile-nav-link">Location &amp; Hours</a>
+      <a href="#contact" class="nav-link mobile-nav-link">Contact</a>
+      <a href="#location" class="btn btn-primary" style="text-align: center; margin-top: 0.5rem;">Visit Us in Bodakdev</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. HERO SECTION
+         ========================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-texture" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span class="dot"></span>
+              <span>Ahmedabad's Viral Dessert &amp; Artisan Café</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Your daily ritual, <br />
+              <span class="accent">brewed with care.</span>
+            </h1>
+
+            <p class="hero-subheadline">
+              Step into a warm sanctuary of tableside fire desserts, authentic Callebaut chocolate creations, sourdough crust pizzas, and freshly pulled espresso—crafted with pure ingredients and zero palm oil in Bodakdev.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#menu" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                  <path d="M7 2v20"></path>
+                  <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                </svg>
+                View Menu
+              </a>
+              <a href="#location" class="btn btn-hero-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                Get Directions
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">11 AM – 1 AM</span>
+                <span class="hero-stat-lbl">Late Night Sanctuary</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">Pure Callebaut</span>
+                <span class="hero-stat-lbl">100% Palm-Oil Free</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">Bodakdev</span>
+                <span class="hero-stat-lbl">Judges Bunglow Road</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Card -->
+          <div class="hero-card-visual">
+            <div class="hero-showcase-box">
+              <div class="hero-showcase-top">
+                <span class="featured-label">Ahmedabad's Viral Icon</span>
+                <span style="color: #D79E17; font-size: 0.85rem; font-weight: 600;">Tableside Show</span>
+              </div>
+              <h2 class="hero-showcase-title">The Strawberry Fire Dessert</h2>
+              <p class="hero-showcase-desc">Delicate sponge and velvety cream ignited live at your table with luscious fresh berries. An unforgettable sensory experience.</p>
+              
+              <div class="hero-dessert-visual">
+                <span class="hero-flame-icon" role="img" aria-label="Flames">🔥</span>
+                <span class="hero-dessert-caption">TORCHED TABLESIDE</span>
+              </div>
+
+              <div class="hero-floating-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Loved by 10,000+ Guests</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. FEATURED DRINKS / MENU PREVIEW
+         ========================================================= -->
+    <section class="menu-preview-section" id="menu">
+      <div class="container">
+        <div class="section-header-row">
+          <span class="section-eyebrow">Plated to Delight</span>
+          <h2 class="section-title">Signature <span class="highlight">Masterpieces</span></h2>
+          <p class="section-desc">
+            Each plated confectionery is built with premium Belgian Callebaut chocolate, fine hazelnut praline, and aromatic infusions—crafted for lingering moments.
+          </p>
+        </div>
+
+        <!-- 4 Signature Desserts / Drinks Preview Cards -->
+        <div class="signature-grid">
+          <!-- Card 1 -->
+          <article class="signature-card">
+            <div class="card-top">
+              <span class="card-tag">House Signature</span>
+              <span class="card-price">₹679/-</span>
+            </div>
+            <h3 class="card-title">Cherry Blossom</h3>
+            <p class="card-desc">An enchanting composition of hazelnut praline and dark Callebaut chocolate coming together for delicate confectionery artistry.</p>
+            <div class="card-flavor-note">
+              <span>🍒 Delicate Hazelnut • Callebaut Noir</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="signature-card">
+            <div class="card-top">
+              <span class="card-tag">Aromatic</span>
+              <span class="card-price">₹579/-</span>
+            </div>
+            <h3 class="card-title">Jasminaar</h3>
+            <p class="card-desc">An elegant, quiet interplay of fragrant natural jasmine and rich Callebaut chocolate, crafted for deep contemplation.</p>
+            <div class="card-flavor-note">
+              <span>🌸 Jasmine Essence • Cocoa Velour</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="signature-card">
+            <div class="card-top">
+              <span class="card-tag">Tableside Pour</span>
+              <span class="card-price">₹479/-</span>
+            </div>
+            <h3 class="card-title">The Last Espresso</h3>
+            <p class="card-desc">Layers of delicate mascarpone and sponge awakened tableside with a steaming pour of warm espresso over a crisp chocolatey disc.</p>
+            <div class="card-flavor-note">
+              <span>☕ Fresh Pull Espresso • Mascarpone</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="signature-card">
+            <div class="card-top">
+              <span class="card-tag">Barista Special</span>
+              <span class="card-price">₹289/-</span>
+            </div>
+            <h3 class="card-title">Pistachio Cold Foam Latte</h3>
+            <p class="card-desc">Slow-steeped espresso layered under silky, roasted pistachio-infused cold foam. Sip slow and stay longer.</p>
+            <div class="card-flavor-note">
+              <span>🥛 Roasted Pistachio • Silky Cold Foam</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive Full Café Menu Tabs -->
+        <div class="menu-tabs-wrapper">
+          <div class="menu-tabs-header">
+            <span class="badge" style="margin-bottom: 0.5rem;">The Yellow Oven Menu</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-text);">Explore Our Kitchen &amp; Bar</h3>
+            <p style="font-size: 0.95rem; color: #5F5233; margin-top: 0.3rem;">From savory fondue gathering tables to stone-baked sourdough pizzas</p>
+          </div>
+
+          <!-- Navigation Tabs -->
+          <div class="menu-tabs-nav" role="tablist">
+            <button class="tab-btn active" data-tab="tab-desserts" role="tab" aria-selected="true">Plated Desserts</button>
+            <button class="tab-btn" data-tab="tab-boards" role="tab" aria-selected="false">The Gathering Table</button>
+            <button class="tab-btn" data-tab="tab-pizzas" role="tab" aria-selected="false">Artisanal Pizzas</button>
+            <button class="tab-btn" data-tab="tab-tartines" role="tab" aria-selected="false">Tartines &amp; Layers</button>
+            <button class="tab-btn" data-tab="tab-coffee" role="tab" aria-selected="false">Coffee Bar</button>
+            <button class="tab-btn" data-tab="tab-salads" role="tab" aria-selected="false">Salad Bowls</button>
+          </div>
+
+          <!-- Tab 1: Plated Desserts -->
+          <div class="menu-items-grid active-tab-panel" id="tab-desserts" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">The Last Espresso</span>
+                <span class="item-price">₹479/-</span>
+              </div>
+              <p class="item-desc">Layers of mascarpone and sponge awakened tableside with a pour of warm espresso on a chocolatey disc.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Jasminaar</span>
+                <span class="item-price">₹579/-</span>
+              </div>
+              <p class="item-desc">An elegant interplay of fragrant Jasmine and rich Callebaut chocolate, crafted for quiet indulgence.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Cherry Blossom</span>
+                <span class="item-price">₹679/-</span>
+              </div>
+              <p class="item-desc">An enchanting composition of Hazelnut praline and dark Callebaut chocolate for delicate confectionery artistry.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Chocolate Bomboloni</span>
+                <span class="item-price">₹299/-</span>
+              </div>
+              <p class="item-desc">Warm artisanal Italian filled doughnuts bursting with velvety chocolate ganache.</p>
+            </div>
+          </div>
+
+          <!-- Tab 2: Gathering Boards -->
+          <div class="menu-items-grid" id="tab-boards" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Cheese Fondue Board</span>
+                <span class="item-price">₹649/-</span>
+              </div>
+              <p class="item-desc">Crackers, onion rings, spicy potato wedges, focaccia toasted slices, grilled paneer, mushroom, beetroot nachos, and salsa dip.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Lebanese Mezze Board</span>
+                <span class="item-price">₹649/-</span>
+              </div>
+              <p class="item-desc">Pita bread, hummus, falafel, labneh, olives, lettuce, cucumbers, cherry tomatoes, bell peppers, kidney beans, lavash crackers, roasted baby potatoes.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">All Day Breakfast Board</span>
+                <span class="item-price">₹649/-</span>
+              </div>
+              <p class="item-desc">Herbed Paneer, Labneh, sautéed veggies, sourdough/croissant, hash browns, tea cake/muffin, honey, chocolate sauce.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Chocolate Fondue Board</span>
+                <span class="item-price">₹649/-</span>
+              </div>
+              <p class="item-desc">A sweet platter of brownies, pancakes, doughnut puffs, butter cake, ginger cookies, toasted brioche cube, seasonal fruits, and wafers.</p>
+            </div>
+          </div>
+
+          <!-- Tab 3: Pizzas -->
+          <div class="menu-items-grid" id="tab-pizzas" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Margherita</span>
+                <span class="item-price">₹499/-</span>
+              </div>
+              <p class="item-desc">Fresh basil, rich plum tomato sauce &amp; melted mozzarella on artisanal crust.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Tandoori Paneer Pizza</span>
+                <span class="item-price">₹589/-</span>
+              </div>
+              <p class="item-desc">Spiced paneer, charred bell peppers &amp; mozzarella on a classic sourdough crust.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">4 Cheese Pizza</span>
+                <span class="item-price">₹639/-</span>
+              </div>
+              <p class="item-desc">Four premium cheeses melted into golden, bubbling harmony.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Truffle Mushroom Pizza</span>
+                <span class="item-price">₹639/-</span>
+              </div>
+              <p class="item-desc">Roasted forest mushrooms, mozzarella &amp; fragrant aromatic truffle oil.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">TYO Special (4 Topping)</span>
+                <span class="item-price">₹699/-</span>
+              </div>
+              <p class="item-desc">The house signature made with our chef's hand-selected blend of assorted toppings.</p>
+            </div>
+          </div>
+
+          <!-- Tab 4: Tartines & Layers -->
+          <div class="menu-items-grid" id="tab-tartines" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Tiramisu Tartine</span>
+                <span class="item-price">₹299/-</span>
+              </div>
+              <p class="item-desc">Mascarpone, rich coffee-soaked notes &amp; dusted dark cocoa on brioche.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Creamy Mushroom Tartine</span>
+                <span class="item-price">₹269/-</span>
+              </div>
+              <p class="item-desc">Garlic cream sautéed mushrooms, garden herbs &amp; fresh shaved parmesan.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Bruschetta Tartine</span>
+                <span class="item-price">₹229/-</span>
+              </div>
+              <p class="item-desc">Vine-ripened tomato basil relish drizzled with aged balsamic glaze.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">TYO Special Layer</span>
+                <span class="item-price">₹399/-</span>
+              </div>
+              <p class="item-desc">The house signature savory sandwich layered with our finest garden flavors.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Gochujang Paneer Sandwich</span>
+                <span class="item-price">₹379/-</span>
+              </div>
+              <p class="item-desc">Sweet-spicy Korean glazed paneer served with house-pickled crisp vegetables.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">French Tartine</span>
+                <span class="item-price">₹239/-</span>
+              </div>
+              <p class="item-desc">Golden caramelised brioche crowned with fresh seasonal fruits &amp; pure maple.</p>
+            </div>
+          </div>
+
+          <!-- Tab 5: Coffee -->
+          <div class="menu-items-grid" id="tab-coffee" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Pistachio Cold Foam Latte</span>
+                <span class="item-price">₹289/-</span>
+              </div>
+              <p class="item-desc">Iced specialty espresso capped with silky whipped pistachio cold cream.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Salted Caramel Latte</span>
+                <span class="item-price">₹269/-</span>
+              </div>
+              <p class="item-desc">Espresso, textured milk, house sea salt caramel swirl (Served hot or iced).</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Biscoff Latte</span>
+                <span class="item-price">₹259/-</span>
+              </div>
+              <p class="item-desc">Infused with authentic Lotus Biscoff spiced cookie butter.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Flat White / Cappuccino</span>
+                <span class="item-price">₹229/-</span>
+              </div>
+              <p class="item-desc">Double shot of espresso with finely textured microfoam.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Single / Double Espresso</span>
+                <span class="item-price">₹99/-</span>
+              </div>
+              <p class="item-desc">Intense, balanced extraction with notes of toasted hazelnut and dark chocolate.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Classic Iced Coffee</span>
+                <span class="item-price">₹229/-</span>
+              </div>
+              <p class="item-desc">Smooth, bold chilled blend served over crystal clear ice.</p>
+            </div>
+          </div>
+
+          <!-- Tab 6: Salads -->
+          <div class="menu-items-grid" id="tab-salads" role="tabpanel">
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">Protein Punch Bowl</span>
+                <span class="item-price">₹349/-</span>
+              </div>
+              <p class="item-desc">Herbed Paneer, hummus, cucumber, olives, pickled onion, lettuce, cherry tomatoes, and crunchy pita crisp.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">TYO House Bowl</span>
+                <span class="item-price">₹349/-</span>
+              </div>
+              <p class="item-desc">Warm sautéed vegetables, paneer, crunchy peanuts, toasted seeds and fresh greens in olive oil dressing.</p>
+            </div>
+            <div class="menu-item-row">
+              <div class="item-header">
+                <span class="item-name">The Botanist's Bowl</span>
+                <span class="item-price">₹349/-</span>
+              </div>
+              <p class="item-desc">Seasoned garden vegetables sautéed and topped with creamy mashed potatoes, fresh herbs, and house spices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. ABOUT / BRAND STORY
+         ========================================================= -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Story Left Column -->
+          <div class="story-content">
+            <span class="section-eyebrow">Our Story &amp; Values</span>
+            <h2 class="section-title">Crafted from Passion, <br /><span class="highlight">Baked with Love</span></h2>
+            
+            <span class="story-quote-mark" aria-hidden="true">“</span>
+            <blockquote class="story-blurb">
+              What started with a love for baking cakes slowly turned into something much bigger—The Yellow Oven was built on the values of quality, honesty, warmth, and the belief that every product should be made with care. Whether it’s a handcrafted dessert, a fresh sourdough pizza, or your daily cup of coffee, we want every visit to feel as special as the very first cake baked for a customer.
+            </blockquote>
+
+            <div class="founder-signature">
+              <div class="founder-avatar" aria-hidden="true">S</div>
+              <div class="founder-details">
+                <h4>Shweta Chauhan</h4>
+                <p>Founder &amp; Head Baker, The Yellow Oven</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Right Column: Core Commitments -->
+          <div class="values-container">
+            <div class="value-card">
+              <div class="value-card-header">
+                <div class="value-icon">🌱</div>
+                <h3>Pure Ingredients, Zero Palm Oil</h3>
+              </div>
+              <p>We source authentic Callebaut Belgian chocolate, fresh herbs, and pure dairy. No shortcuts, no palm oil, and no artificial compromises in our kitchen.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-card-header">
+                <div class="value-icon">💛</div>
+                <h3>Warm, Honest Hospitality</h3>
+              </div>
+              <p>Every guest is part of our journey. From tableside dessert presentations to personal chef check-ins, you are welcomed with authentic warmth.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-card-header">
+                <div class="value-icon">🌙</div>
+                <h3>Late Night Sanctuary</h3>
+              </div>
+              <p>Ahmedabad comes alive after dusk. We keep our ovens running and coffee grinding until 1:00 AM every single night for your post-dinner gatherings.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Reviews Spotlight -->
+        <div class="guest-reviews-box">
+          <h3 class="guest-reviews-title">From Our Ahmedabad Community</h3>
+          <div class="reviews-stream">
+            <div class="review-pill">
+              <p class="review-pill-text">"The cheesecake was one of the best we had till date with the smoothest texture. They use pure ingredients and no palm oil in the kitchen."</p>
+              <div class="review-author">
+                <span>— Ronak Modi</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+            <div class="review-pill">
+              <p class="review-pill-text">"The Cherry Blossom was absolutely delicious and beautifully presented. Definitely a must-try for dessert lovers in Ahmedabad!"</p>
+              <div class="review-author">
+                <span>— Priya Valvi</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+            <div class="review-pill">
+              <p class="review-pill-text">"Great food, lovely ambience, and outstanding hospitality. A special thanks to the chef for personally ensuring that everything was perfect."</p>
+              <div class="review-author">
+                <span>— Sarika Raghav</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. VISIT & HOURS BLOCK
+         ========================================================= -->
+    <section class="visit-section" id="location">
+      <div class="container">
+        <div class="section-header-row">
+          <span class="section-eyebrow">Plan Your Visit</span>
+          <h2 class="section-title">Find Us in <span class="highlight">Bodakdev</span></h2>
+          <p class="section-desc">Join us for an intimate afternoon coffee, an evening dinner board, or a midnight dessert craving.</p>
+        </div>
+
+        <div class="visit-grid">
+          <!-- Left: Hours & Address Info Card -->
+          <div class="visit-info-card">
+            <div>
+              <!-- Live Open/Closed Status Badge (Calculated via Vanilla JS) -->
+              <div class="status-banner" id="statusBanner">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Checking opening status...</span>
+              </div>
+
+              <div class="info-block">
+                <h3 class="info-heading">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Physical Address
+                </h3>
+                <p class="address-text">
+                  <strong>B - 101, Shivalik Platinum</strong><br />
+                  Judges Bunglow Road, Bodakdev, Satellite<br />
+                  Ahmedabad, Gujarat 380015
+                </p>
+              </div>
+
+              <div class="info-block">
+                <h3 class="info-heading">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Opening Hours
+                </h3>
+                <ul class="hours-list" id="hoursList">
+                  <li class="hours-row" data-day="1"><span class="hours-day">Monday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="2"><span class="hours-day">Tuesday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="3"><span class="hours-day">Wednesday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="4"><span class="hours-day">Thursday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="5"><span class="hours-day">Friday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="6"><span class="hours-day">Saturday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                  <li class="hours-row" data-day="0"><span class="hours-day">Sunday</span><span class="hours-time">11:00 AM – 1:00 AM</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Parking / Transit Note -->
+            <div class="transit-note">
+              <strong>🚗 Parking &amp; Transit:</strong> Valet and convenient street parking available right in front of Shivalik Platinum on Judges Bunglow Road. Easily accessible from SG Highway and Satellite crossroads.
+            </div>
+          </div>
+
+          <!-- Right: Map Embed Card -->
+          <div class="visit-map-card">
+            <div class="map-frame-wrapper">
+              <iframe
+                title="The Yellow Oven Location Map"
+                src="https://maps.google.com/maps?q=B-101+Shivalik+Platinum+Judges+Bunglow+Road+Bodakdev+Ahmedabad&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Google Maps view of The Yellow Oven Ahmedabad">
+              </iframe>
+            </div>
+            <div class="map-actions">
+              <div class="location-landmark">
+                📍 Landmark: Near Judges Bunglow Cross Road, Bodakdev
+              </div>
+              <a
+                href="https://maps.google.com/?q=The+Yellow+Oven+Shivalik+Platinum+Bodakdev+Ahmedabad"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+                Open in Google Maps ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       6. FOOTER
+       ========================================================= -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Footer Brand Info -->
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 0.5rem;">
+            <div class="logo-icon" style="width: 36px; height: 36px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              </svg>
+            </div>
+            <div class="logo-text" style="font-size: 1.2rem;">THE YELLOW OVEN</div>
+          </div>
+          <p>
+            Ahmedabad's late-night haven for viral fire desserts, sourdough crust pizzas, and specialty coffee. Crafted with honest ingredients and boundless care.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Google Business Reviews">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Café Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#menu" class="footer-link">Desserts &amp; Pizzas</a></li>
+            <li><a href="#menu" class="footer-link">The Gathering Table</a></li>
+            <li><a href="#story" class="footer-link">Founder's Story</a></li>
+            <li><a href="#location" class="footer-link">Hours &amp; Location</a></li>
+            <li><a href="#location" class="footer-link">Parking &amp; Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div>
+          <h4 class="footer-heading">Stay in the Circle</h4>
+          <p style="font-size: 0.88rem; color: #B5A58B; margin-bottom: 1rem;">
+            Receive seasonal tasting invitations, secret weekend dessert drops, and festival specials.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input
+                type="email"
+                class="newsletter-input"
+                id="newsletterEmail"
+                placeholder="Enter your email address..."
+                required
+                aria-label="Email address for newsletter"
+              />
+              <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.25rem;">Join</button>
+            </div>
+            <span class="newsletter-feedback" id="newsletterFeedback"></span>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 The Yellow Oven. All rights reserved. Baked with love in Bodakdev, Ahmedabad.
+        </div>
+        <div>
+          Pure Callebaut • Zero Palm Oil • Handcrafted with Pride
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       VANILLA JAVASCRIPT LOGIC
+       ========================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Toggle
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          hamburgerBtn.classList.toggle('active');
+          hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 2. Navbar Scroll Shadow Effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // 3. Menu Tabs Switching
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.menu-items-grid');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.getAttribute('data-tab');
+
+          tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(panel => {
+            panel.classList.remove('active-tab-panel');
+          });
+
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) {
+            targetPanel.classList.add('active-tab-panel');
+          }
+        });
+      });
+
+      // 4. Dynamic Live Open / Closed Status & Active Day Highlight
+      const statusDot = document.getElementById('statusDot');
+      const statusText = document.getElementById('statusText');
+      const hoursRows = document.querySelectorAll('.hours-row');
+
+      const now = new Date();
+      const currentDay = now.getDay(); // 0 is Sunday, 1 is Monday ...
+      const currentHour = now.getHours();
+
+      // Highlight today's row in the hours list
+      hoursRows.forEach(row => {
+        if (parseInt(row.getAttribute('data-day'), 10) === currentDay) {
+          row.classList.add('highlight-day');
+          const daySpan = row.querySelector('.hours-day');
+          if (daySpan) {
+            daySpan.innerHTML += ' <span style="font-size:0.75rem; color:#D79E17;">(Today)</span>';
+          }
+        }
+      });
+
+      // The café is open 11:00 AM (11) until 1:00 AM (01:00)
+      // Open hours: (hour >= 11) OR (hour === 0)
+      const isOpenNow = (currentHour >= 11 || currentHour === 0);
+
+      if (isOpenNow) {
+        statusDot.classList.remove('closed');
+        statusText.textContent = 'Open Now • Serving until 1:00 AM Tonight';
+      } else {
+        statusDot.classList.add('closed');
+        statusText.textContent = 'Closed Now • Opens at 11:00 AM Today';
+      }
+
+      // 5. Newsletter Submission Handling
+      const newsletterForm = document.getElementById('newsletterForm');
+      const newsletterEmail = document.getElementById('newsletterEmail');
+      const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+      if (newsletterForm && newsletterEmail && newsletterFeedback) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const emailVal = newsletterEmail.value.trim();
+
+          if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) {
+            newsletterFeedback.textContent = 'Please enter a valid email address.';
+            newsletterFeedback.className = 'newsletter-feedback error';
+            return;
+          }
+
+          newsletterFeedback.textContent = 'Thank you! You are on our private guest list.';
+          newsletterFeedback.className = 'newsletter-feedback success';
+          newsletterEmail.value = '';
+
+          setTimeout(() => {
+            newsletterFeedback.textContent = '';
+            newsletterFeedback.className = 'newsletter-feedback';
+          }, 6000);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
